@@ -1,18 +1,15 @@
 from turtle import st
 from flask import Flask, render_template, request, redirect, url_for, session
 from markupsafe import escape
-
-
 import os
-
 import ibm_db
 
 
-DATABASE_NAME = "your cred"
-HOST_NAME = "your cred"
-PORT_NUMBER = "your cred"
-USER_ID = "your cred"
-PASSWORD = "your cred"
+DATABASE_NAME = "bludb"
+HOST_NAME = "3883e7e4-18f5-4afe-be8c-fa31c41761d2.bs2io90l08kqb1od8lcg.databases.appdomain.cloud"
+PORT_NUMBER = "31498"
+USER_ID = "qtl83809"
+PASSWORD = "55UvDW1scUf5jZJn"
 
 
 conn = ibm_db.connect(f"DATABASE={DATABASE_NAME};HOSTNAME={HOST_NAME};PORT={PORT_NUMBER};SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID={USER_ID};PWD={PASSWORD}",'','')
